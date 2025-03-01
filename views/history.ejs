@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가격 변동 내역</title>
+</head>
+<body>
+    <h1>📊 가격 변동 내역</h1>
+    <a href="/">🔙 홈으로</a>
+    <ul>
+        <% history.forEach(item => { %>
+            <li>
+                <img src="<%= item.image %>" width="100"> <br>
+                <a href="<%= item.link %>" target="_blank"><%= item.title.replace(/<\/?b>/g, '') %></a> <br>
+                검색어: <%= item.query %> <br>
+                가격: <strong><%= item.price %>원</strong> <br>
+                기록 날짜: <%= item.createdAt.toISOString().split('T')[0] %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

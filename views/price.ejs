@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가격 조회 결과</title>
+</head>
+<body>
+    <h1>"<%= query %>" 가격 조회 결과</h1>
+    <a href="/">🔙 홈으로</a>
+    <ul>
+        <% results.forEach(item => { %>
+            <li>
+                <img src="<%= item.image %>" width="100"> <br>
+                <a href="<%= item.link %>" target="_blank"><%= item.title.replace(/<\/?b>/g, '') %></a> <br>
+                <strong>최저가: <%= item.lprice %>원</strong> <!-- lprice 사용 -->
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
