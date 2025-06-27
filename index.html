@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> WEB1 - Welcome</title>
+    <title>WEB1 - Welcome</title>
     <meta charset="utf-8">
 
-    <!-- Google Tag Manager -->
+    <!-- Google Analytics gtag.js 직접 연동 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL6KTF0ZZM"></script>
     <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id=G-KL6KTF0ZZM+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','G-KL6KTF0ZZM');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KL6KTF0ZZM');
     </script>
-    <!-- End Google Tag Manager -->
+    <!-- End Google Analytics -->
 
 </head>
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-KL6KTF0ZZM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <h1><a href="index.html">WEB</a></h1>
     <ol>
@@ -31,6 +26,7 @@
     <h2>WEB</h2>
     <p>The World Wide Web is an information space...</p>
 
+    <!-- Disqus 댓글 -->
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function () {
@@ -44,6 +40,7 @@
           (d.head || d.body).appendChild(s);
         })();
     </script>
+    <!-- End Disqus -->
 
     <!-- Tawk.to Live Chat -->
     <script type="text/javascript">
@@ -57,8 +54,10 @@
         s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
+    <!-- End Tawk.to -->
 
 </body>
 </html>
+
 
 
